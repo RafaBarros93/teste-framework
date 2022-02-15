@@ -14,5 +14,8 @@
     "lint-staged": "^12.3.4",
     "nodemon": "^2.0.15",
     "standard": "^16.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
   }
 }

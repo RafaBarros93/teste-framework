@@ -8,6 +8,7 @@
     "start": "nodemon server.js --ignore __tests__"
   },
   "devDependencies": {
+    "lint-staged": "^12.3.4",
     "nodemon": "^2.0.15",
     "standard": "^16.0.4"
   }

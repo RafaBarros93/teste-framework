@@ -1,0 +1,14 @@
+{
+  "name": "teste-framework",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "author": "rafaeldevfina <rafael@finafacil.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js --ignore __tests__"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "standard": "^16.0.4"
+  }
+}

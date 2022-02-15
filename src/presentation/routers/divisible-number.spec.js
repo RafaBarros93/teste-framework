@@ -1,7 +1,7 @@
 const DivisibleNumberRouter = require('./divisible-number')
 
 describe('Divisible number', () => {
-  test('Should return 200 if  number is provided', () => {
+  test('Should return 200 if number is provided', () => {
     const sut = new DivisibleNumberRouter()
 
     const httpRequest = {

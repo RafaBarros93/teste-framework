@@ -1,4 +1,4 @@
-const HttpResponse = require('../erros/http-reponse')
+const HttpResponse = require('../helpers/http-reponse')
 
 module.exports = class DivisibleNumberRouter {
   route(httpRequest) {

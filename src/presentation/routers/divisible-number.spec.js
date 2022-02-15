@@ -1,5 +1,5 @@
 const DivisibleNumberRouter = require('./divisible-number')
-const MissingParamError = require('../erros/missing-param-error')
+const MissingParamError = require('../helpers/missing-param-error')
 
 describe('Divisible number', () => {
   test('Should return 200 if number is provided', () => {

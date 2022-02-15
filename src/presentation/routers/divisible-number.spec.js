@@ -10,7 +10,6 @@ describe('Divisible number', () => {
       }
     }
     const httpResponse = sut.route(httpRequest)
-    console.log('Http ress', httpResponse)
 
     expect(httpResponse.statuCode).toBe(200)
   })
@@ -22,8 +21,14 @@ describe('Divisible number', () => {
       body: {}
     }
     const httpResponse = sut.route(httpRequest)
-    console.log('Http ressp teste 2', httpResponse)
 
     expect(httpResponse.statuCode).toBe(400)
+  })
+  test('Should return 400 if  httpRequest is not provided', () => {
+    const sut = new DivisibleNumberRouter()
+
+    const httpResponse = sut.route()
+
+    expect(httpResponse.statuCode).toBe(500)
   })
 })

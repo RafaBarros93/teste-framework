@@ -1,10 +1,8 @@
 module.exports = class DivisibleNumberRouter {
   route(httpRequest) {
-    console.log('Req', httpRequest)
+    if (!httpRequest) return {statuCode: 500}
 
-    let {
-      body: {number}
-    } = httpRequest
+    let {number} = httpRequest.body
 
     if (!number) return {statuCode: 400}
     else return {statuCode: 200}

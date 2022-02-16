@@ -1,5 +1,5 @@
 const DivisibleNumberRouter = require('./divisible-number')
-const MissingParamError = require('../helpers/missing-param-error')
+const {ServerError, MissingParamError} = require('../errors')
 
 describe('Divisible number', () => {
   test('Should return 200 if number is provided', () => {
@@ -38,8 +38,9 @@ describe('Divisible number', () => {
 
     const httpRequest = {}
 
-    const {statusCode} = sut.route(httpRequest)
+    const {statusCode, body} = sut.route(httpRequest)
 
     expect(statusCode).toBe(500)
+    expect(body.error).toBe(new ServerError().message)
   })
 })

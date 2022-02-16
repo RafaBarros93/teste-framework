@@ -15,10 +15,11 @@ describe('Divisible number', () => {
     }
     const {statusCode, body} = sut.route(httpRequest)
 
-    console.log('body', body)
+    console.log('BodY::', body)
 
     expect(statusCode).toBe(200)
-    expect(body).toEqual([45, 15, 9, 5, 3, 1])
+    expect(body[2].divisores).toEqual(9)
+    expect(body[4].primos).toEqual(5)
   })
 
   test('Should return 400 if no number is provided', () => {

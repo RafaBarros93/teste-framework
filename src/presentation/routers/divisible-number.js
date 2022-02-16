@@ -1,8 +1,8 @@
 const HttpResponse = require('../helpers/http-reponse')
 
 module.exports = class DivisibleNumberRouter {
-  constructor({authUseCase} = {}) {
-    this.authUseCase = authUseCase
+  constructor(divisibleNumberUseCas = {}) {
+    this.divisibleNumberUseCase = divisibleNumberUseCas
   }
 
   route(httpRequest) {
@@ -11,6 +11,9 @@ module.exports = class DivisibleNumberRouter {
     let {number} = httpRequest.body
 
     if (!number) return HttpResponse.badRequest('number')
-    else return HttpResponse.ok([])
+
+    let arrayDivisibleNumbers = this.divisibleNumberUseCase.makeDivsibleNumber(number)
+
+    return HttpResponse.ok(arrayDivisibleNumbers)
   }
 }

@@ -5,7 +5,7 @@
   "author": "rafaeldevfina <rafael@finafacil.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon server.js --ignore __tests__",
+    "start": "nodemon src/main/index.js --ignore __tests__",
     "test": "jest --watchAll",
     "test:staged": "jest"
   },
@@ -22,6 +22,7 @@
     "standard": "^16.0.4"
   },
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "fast-glob": "^3.2.11"
   }
 }

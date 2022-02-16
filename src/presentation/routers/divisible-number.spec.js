@@ -10,9 +10,12 @@ describe('Divisible number', () => {
         number: 45
       }
     }
-    const {statusCode} = sut.route(httpRequest)
+    const {statusCode, body} = sut.route(httpRequest)
+
+    console.log('body', body)
 
     expect(statusCode).toBe(200)
+    expect(body).toEqual([])
   })
 
   test('Should return 400 if no number is provided', () => {

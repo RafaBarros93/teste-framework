@@ -3,7 +3,7 @@ const {ServerError, MissingParamError} = require('../errors')
 const DivisibleNumberUseCase = require('../../domain/divisiblenumber-usecase')
 
 describe('Divisible number', () => {
-  test('Should return 200 if number is provided', () => {
+  test('Should return 200 and result divisible numbers and prime numbers', () => {
     let divisibleNumberUseCase = new DivisibleNumberUseCase()
 
     const sut = new DivisibleNumberRouter(divisibleNumberUseCase)
@@ -15,11 +15,9 @@ describe('Divisible number', () => {
     }
     const {statusCode, body} = sut.route(httpRequest)
 
-    console.log('BodY::', body)
-
     expect(statusCode).toBe(200)
-    expect(body[2].divisores).toEqual(9)
-    expect(body[4].primos).toEqual(5)
+    expect(body[2].divisores).toEqual(5)
+    expect(body[8].primos).toEqual(1)
   })
 
   test('Should return 400 if no number is provided', () => {

@@ -8,8 +8,8 @@
     "start": "nodemon src/main/index.js --ignore __tests__",
     "test": "jest --colors --noStackTrace --passWithNoTests --runInBand",
     "test:unit": "yarn test -- --watch -c jest-unit-config.js",
-    "test:integration": "yarn test -- --watch -c jest-integration-config.js",
-    "test:staged": "yarn jest --findRelatedTests --silent",
+    "test:integration": "yarn test - --watch -c jest-integration-config.js",
+    "test:staged": "yarn test -- --findRelatedTests --silent",
     "swagger-autogen": "node src/main/swagger.js "
   },
   "standard": {

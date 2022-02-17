@@ -6,8 +6,11 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon src/main/index.js --ignore __tests__",
-    "test": "jest --watchAll",
-    "test:staged": "jest"
+    "test": "jest --colors --noStackTrace --passWithNoTests --runInBand",
+    "test:unit": "yarn test -- --watch -c jest-unit-config.js",
+    "test:integration": "yarn test -- --watch -c jest-integration-config.js",
+    "test:staged": "yarn jest --findRelatedTests --silent",
+    "swagger-autogen": "node src/main/swagger.js "
   },
   "standard": {
     "env": [
@@ -24,6 +27,9 @@
   "dependencies": {
     "express": "^4.17.2",
     "fast-glob": "^3.2.11",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "supertest": "^6.2.2",
+    "swagger-autogen": "^2.18.8",
+    "swagger-ui-express": "^4.3.0"
   }
 }

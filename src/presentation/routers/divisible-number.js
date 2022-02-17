@@ -6,14 +6,18 @@ module.exports = class DivisibleNumberRouter {
   }
 
   route(httpRequest) {
-    if (!httpRequest || !httpRequest.body) return HttpResponse.internalServerError()
+    try {
+      let {number} = httpRequest.body
 
-    let {number} = httpRequest.body
+      if (!httpRequest || !httpRequest.body) return HttpResponse.internalServerError()
 
-    if (!number) return HttpResponse.badRequest('number')
+      if (!number) return HttpResponse.badRequest('number')
 
-    let arrayDivisibleNumbers = this.divisibleNumberUseCase.makeDivsibleNumber(number)
+      let arrayDivisibleNumbers = this.divisibleNumberUseCase.makeDivsibleNumber(number)
 
-    return HttpResponse.ok(arrayDivisibleNumbers)
+      return HttpResponse.ok(arrayDivisibleNumbers)
+    } catch (error) {
+      return HttpResponse.internalServerError()
+    }
   }
 }

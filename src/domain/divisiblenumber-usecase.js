@@ -20,6 +20,7 @@ module.exports = class DivisibleNumberUseCase {
         }
       }
     }
+    arr.sort((a, b) => (a.divisores > b.divisores ? 1 : b.divisores > a.divisores ? -1 : 0))
 
     return arr
   }

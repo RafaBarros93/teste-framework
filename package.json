@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "express": "^4.17.2",
-    "fast-glob": "^3.2.11"
+    "fast-glob": "^3.2.11",
+    "morgan": "^1.10.0"
   }
 }

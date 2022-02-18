@@ -23,16 +23,16 @@ yarn start
 ## Testes
 
 ```bash
-integração
+#integração
 yarn test:integration
 
-unitario
+#unitário
 yarn test:unit
 
-ci
+#ci
 yarn test:ci
 
-staged
+#staged
 yarn test:staged
 
 

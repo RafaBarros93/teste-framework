@@ -13,4 +13,3 @@ describe('CORS Middleware', () => {
     expect(res.headers['access-control-allow-headers']).toBe('*')
   })
 })
-

@@ -10,7 +10,7 @@
     "test:unit": "yarn test - --watch -c jest-unit-config.js",
     "test:integration": "yarn test - --watch -c jest-integration-config.js",
     "test:staged": "yarn test - --findRelatedTests jest.config.js --silent",
-    "swagger-autogen": "node src/main/swagger.js "
+    "test:ci": "yarn test -- --coverage --silent"
   },
   "standard": {
     "env": [
@@ -18,6 +18,7 @@
     ]
   },
   "devDependencies": {
+    "dotenv": "^16.0.0",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
     "lint-staged": "^12.3.4",
@@ -28,8 +29,6 @@
     "express": "^4.17.2",
     "fast-glob": "^3.2.11",
     "morgan": "^1.10.0",
-    "supertest": "^6.2.2",
-    "swagger-autogen": "^2.18.8",
-    "swagger-ui-express": "^4.3.0"
+    "supertest": "^6.2.2"
   }
 }

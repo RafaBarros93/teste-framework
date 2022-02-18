@@ -1,4 +1,4 @@
-const isPrime = require('../domain/helpers/is-prime')
+const {isPrime} = require('../domain/helpers/is-prime')
 
 module.exports = class DivisibleNumberUseCase {
   makeDivsibleNumber(number) {

@@ -27,7 +27,7 @@
     "standard": "^16.0.4"
   },
   "dependencies": {
-    "chalk": "^5.0.0",
+    "chalk": "2.4.1",
     "express": "^4.17.2",
     "fast-glob": "^3.2.11",
     "morgan": "^1.10.0",

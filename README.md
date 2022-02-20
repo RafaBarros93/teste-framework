@@ -1,7 +1,5 @@
 # Teste Framework
 
-
-
 Desafio para vaga desenvolvedor Node.js developing in [node](https://nodejs.org/en/).
 
 ## Installation
@@ -41,11 +39,13 @@ yarn test:staged
 ## View application in Heroku
 
 ```bash
+#dev
  http://localhost:3002
 ```
 
 ```bash
- http://localhost:3002
+#production
+https://teste-framework.herokuapp.com/api/check
 ```
 
 ## License

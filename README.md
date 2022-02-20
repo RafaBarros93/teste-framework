@@ -18,6 +18,11 @@ yarn
 yarn start
 ```
 
+```bash
+#dev
+ http://localhost:3002
+```
+
 ## Testes
 
 ```bash
@@ -37,11 +42,6 @@ yarn test:staged
 ```
 
 ## View application in Heroku
-
-```bash
-#dev
- http://localhost:3002
-```
 
 ```bash
 #production

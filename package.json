@@ -11,8 +11,7 @@
     "test:integration": "yarn test - --watch -c jest-integration-config.js",
     "test:staged": "yarn test - --findRelatedTests jest.config.js --silent",
     "test:ci": "yarn test - --coverage --silent",
-    "start": "pm2 start processes.json --no-daemon",
-    "prod": "node src/main/index.js"
+    "start": "node src/main/index.js"
   },
   "standard": {
     "env": [
@@ -32,7 +31,6 @@
     "express": "^4.17.2",
     "fast-glob": "^3.2.11",
     "morgan": "^1.10.0",
-    "pm2": "^5.2.0",
     "supertest": "^6.2.2"
   }
 }

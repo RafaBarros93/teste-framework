@@ -38,6 +38,16 @@ yarn test:staged
 
 ```
 
+## View application in Heroku
+
+```bash
+ http://localhost:3002
+```
+
+```bash
+ http://localhost:3002
+```
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)

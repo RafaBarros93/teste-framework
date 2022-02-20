@@ -10,7 +10,8 @@
     "test:unit": "yarn test - --watch -c jest-unit-config.js",
     "test:integration": "yarn test - --watch -c jest-integration-config.js",
     "test:staged": "yarn test - --findRelatedTests jest.config.js --silent",
-    "test:ci": "yarn test - --coverage --silent"
+    "test:ci": "yarn test - --coverage --silent",
+    "prod": "pm2 start processes.json --no-daemon"
   },
   "standard": {
     "env": [
@@ -29,6 +30,7 @@
     "express": "^4.17.2",
     "fast-glob": "^3.2.11",
     "morgan": "^1.10.0",
+    "pm2": "^5.2.0",
     "supertest": "^6.2.2"
   }
 }
